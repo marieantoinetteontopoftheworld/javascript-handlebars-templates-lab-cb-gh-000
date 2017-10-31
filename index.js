@@ -26,7 +26,10 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  alert(data['name']);
+  var template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
+  var result = template(data);
+
+  document.getElementsByTagName('main')[0].innerHTML += result;
 }
 
 function init() {
