@@ -48,6 +48,7 @@ function updateRecipe() {
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
 
+  document.getElementById('recipe-edit-form').style.display = "none";
   document.getElementById('recipe').innerHTML = result;
 }
 
