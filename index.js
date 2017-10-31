@@ -36,7 +36,7 @@ function updateRecipe() {
   data['description'] = document.getElementsByName('edit-details')[0].value;
 
   var ingredientsNodes = document.getElementsByName('edit-ingredient');
-  var ingredients = [];
+
   for (i = 0; i < ingredientsNodes.length; i++) {
     if (ingredientsNodes[i].value) {
       ingredients[i] = ingredientsNodes[i].value;
