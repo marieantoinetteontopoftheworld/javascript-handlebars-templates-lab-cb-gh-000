@@ -43,8 +43,6 @@ function updateRecipe() {
     }
   }
 
-  data['ingredients'] = ingredients;
-
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
 
