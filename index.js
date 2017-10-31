@@ -1,5 +1,9 @@
 var data = {};
 
+function initialRender() {
+  
+}
+
 function createRecipe() {
   var details = document.getElementsByName('details');
 
