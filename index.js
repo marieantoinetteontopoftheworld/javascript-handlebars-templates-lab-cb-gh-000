@@ -53,15 +53,15 @@ function displayEditForm() {
 }
 
 function updateRecipe() {
-  if (document.getElementsByName('edit-details')[1].value) {
-    data['name'] = document.getElementsByName('edit-details')[1].value;
+  if (document.getElementsByName('details')[0].value) {
+    data['description'] = document.getElementsByName('details')[0].value;
   }
   
-  if (document.getElementsByName('edit-details')[0].value) {
-    data['description'] = document.getElementsByName('edit-details')[0].value;
+  if (document.getElementsByName('details')[1].value) {
+    data['name'] = document.getElementsByName('details')[1].value;
   }
 
-  var ingredientsNodes = document.getElementsByName('edit-ingredient');
+  var ingredientsNodes = document.getElementsByName('ingredient');
 
   for (i = 0; i < ingredientsNodes.length; i++) {
     if (ingredientsNodes[i].value) {
