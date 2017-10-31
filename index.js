@@ -53,6 +53,10 @@ function displayEditForm() {
 }
 
 function updateRecipe() {
+  if (document.getElementsByName('edit-details')[1].value) {
+    data['name'] = document.getElementsByName('edit-details')[1].value;
+  }
+  
   if (document.getElementsByName('edit-details')[0].value) {
     data['description'] = document.getElementsByName('edit-details')[0].value;
   }
@@ -68,7 +72,7 @@ function updateRecipe() {
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
 
-  document.getElementById('recipe-edit-form').remove();
+  document.getElementById('recipe-form').remove();
   document.getElementById('recipe').innerHTML = result;
 }
 
