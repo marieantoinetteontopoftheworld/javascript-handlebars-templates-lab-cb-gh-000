@@ -8,10 +8,12 @@ function createRecipe() {
 
   var ingredientsNodes = document.getElementsByName('ingredient');
 
-  data['ingredients'] = [];
+  var ingredients = [];
   for (i = 0; i < ingredientsNodes.length; i++) {
-    data[ingredients[i]] = ingredientsNodes[i].value;
+    ingredients[i] = ingredientsNodes[i].value;
   }
+
+  data['ingredients'] = ingredients;
 
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
