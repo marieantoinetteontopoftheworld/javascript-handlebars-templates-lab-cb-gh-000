@@ -59,6 +59,9 @@ function init() {
   Handlebars.registerHelper('displayIngredient', function() {
     return new Handlebars.SafeString('<li>' + this + '</li>');
   });
+
+  //
+  initalRender();
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
