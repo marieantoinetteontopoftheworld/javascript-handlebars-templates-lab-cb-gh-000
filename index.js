@@ -28,7 +28,10 @@ function createRecipe() {
 function displayEditForm() {
   //var template = Handlebars.compile(document.getElementById('recipe-edit-form-template').innerHTML);
   //var result = template(data);
-  alert(document.getElementById('recipe-details-partial'));
+  var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
+  var result = template(data);
+
+  document.getElementsByTagName('main')[0].innerHTML = result;
   //document.getElementsByTagName('main')[0].innerHTML += result;
 }
 
