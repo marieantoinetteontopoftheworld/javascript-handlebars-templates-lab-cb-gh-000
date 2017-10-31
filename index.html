@@ -23,7 +23,7 @@
       <script type="text/x-handlebars-template" id="recipe-template">
         <h1>{{ name }}</h1>
         {{> recipeDetailsPartial }}
-        <a href="#" onClick="return displayEditForm();">Edit Recipe</a>
+        <a onClick="return displayEditForm();">Edit Recipe</a>
       </script>
 
       <script type="text/x-handlebars-template" id="recipe-details-partial">
@@ -33,6 +33,10 @@
             {{ displayIngredient }}
           {{/each}}
         </ul>
+      </script>
+
+      <script type="text/x-handlebars-template" id="recipe-form-template">
+        <p>edit!</p>
       </script>
 
     </main>
