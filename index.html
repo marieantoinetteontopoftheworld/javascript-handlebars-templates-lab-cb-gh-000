@@ -25,7 +25,7 @@
           Name: <input type="text" name="details">{{ name }}</input><br/>
           Description: <input type="text" name="details">{{ description }}</input><br/>
           {{#each ingredients}}
-            Ingredient: <input type="text" name="ingredient">{{ ingredients }}</input><br/>
+            Ingredient: <input type="text" name="ingredient">{{ this }}</input><br/>
           {{/each}}
           <button type="submit">Submit Recipe</button>
         </form>
