@@ -6,7 +6,12 @@ function createRecipe() {
     description: details[1].value
   };
 
-  //var ingredientsNodes = document.getElementsByName('ingredient');
+  var ingredientsNodes = document.getElementsByName('ingredient');
+
+  data['ingredients'] = [];
+  for (i = 0; i < ingredientsNodes.length; i++) {
+    data[ingredients[i]] = ingredientsNodes[i].value;
+  }
 
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
