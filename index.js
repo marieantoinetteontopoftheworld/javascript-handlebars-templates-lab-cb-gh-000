@@ -1,6 +1,5 @@
 function createRecipe() {
-  var name = document.getElementsByName('details')[0].value;
-  var description = document.getElementsByName('details')[1].value;
+  var details = document.getElementsByName('details');
   var ingredients = document.getElementsByName('ingredient');
 
 
