@@ -45,7 +45,7 @@ function createRecipe() {
 
 function displayEditForm() {
   data['function_call'] = 'updateRecipe()';
-  
+
   var template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   var result = template(data);
 
