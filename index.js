@@ -33,7 +33,9 @@ function displayEditForm() {
 }
 
 function updateRecipe() {
-  data['description'] = document.getElementsByName('edit-details')[0].value;
+  if (document.getElementsByName('edit-details')[0].value) {
+    data['description'] = document.getElementsByName('edit-details')[0].value;
+  }
 
   var ingredientsNodes = document.getElementsByName('edit-ingredient');
 
