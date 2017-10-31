@@ -10,7 +10,9 @@ function createRecipe() {
 
   var ingredients = [];
   for (i = 0; i < ingredientsNodes.length; i++) {
-    ingredients[i] = ingredientsNodes[i].value;
+    if ingredientsNodes[i].value {
+      ingredients[i] = ingredientsNodes[i].value;
+    }
   }
 
   data['ingredients'] = ingredients;
