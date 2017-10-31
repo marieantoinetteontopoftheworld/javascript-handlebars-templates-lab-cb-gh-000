@@ -1,5 +1,5 @@
 function createRecipe() {
-  var name = document.forms['recipe-form'].elements[0];
+  var name = document.getElementsByName('name').value;
   alert(name);
 }
 
