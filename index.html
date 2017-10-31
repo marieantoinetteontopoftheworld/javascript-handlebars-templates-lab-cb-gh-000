@@ -24,11 +24,9 @@
         <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }} return false;">
           Name: <input type="text" name="details">{{ name }}</input><br/>
           Description: <input type="text" name="details">{{ description }}</input><br/>
-          Ingredient #1: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
-          Ingredient #2: <input type="text" name="ingredient">{{ ingredients[1] }}</input><br/>
-          Ingredient #3: <input type="text" name="ingredient">{{ ingredients[2] }}</input><br/>
-          Ingredient #4: <input type="text" name="ingredient">{{ ingredients[3] }}</input><br/>
-          Ingredient #5: <input type="text" name="ingredient">{{ ingredients[4] }}</input><br/>
+          {{#each ingredients}}
+            Ingredient: <input type="text" name="ingredient">{{ ingredients }}</input><br/>
+          {{/each}}
           <button type="submit">Submit Recipe</button>
         </form>
       </script>
