@@ -21,9 +21,11 @@
       </form>
 
       <script type="text/x-handlebars-template" id="recipe-template">
-        <h1>{{ name }}</h1>
-        {{> recipeDetailsPartial }}
-        <a href="#" onClick="displayEditForm();">Edit Recipe</a>
+        <div id="recipe">
+          <h1>{{ name }}</h1>
+          {{> recipeDetailsPartial }}
+          <a href="#" onClick="displayEditForm();">Edit Recipe</a>
+        </div>
       </script>
 
       <script type="text/x-handlebars-template" id="recipe-details-partial">
