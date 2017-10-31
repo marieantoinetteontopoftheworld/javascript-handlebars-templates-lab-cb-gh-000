@@ -1,9 +1,9 @@
 function createRecipe() {
   var details = document.getElementsByName('details');
+  var name = details[0].value;
+  var description = details[1].value;
+
   var ingredients = document.getElementsByName('ingredient');
-
-
-  alert(ingredients[4].value);
 }
 
 function init() {
