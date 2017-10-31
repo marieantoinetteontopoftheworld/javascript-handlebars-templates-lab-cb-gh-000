@@ -4,7 +4,7 @@ function createRecipe() {
   var data = {
     'name' = details[0].value;
     'description' = details[1].value;
-  }
+  };
 
   var ingredients = document.getElementsByName('ingredient');
 
