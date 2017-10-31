@@ -24,11 +24,11 @@
         <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }} return false;">
           Name: <input type="text" name="details">{{#if name }}{{ name }}{{/if}}</input><br/>
           Description: <input type="text" name="details">{{#if description}}{{ description }}{{/if}}</input><br/>
-          Ingredient #1: <input type="text" name="ingredient">{{if ingredients[0] }}{{ ingredients[0] }}{{/if}}</input><br/>
-          Ingredient #2: <input type="text" name="ingredient">{{if ingredients[1] }}{{ ingredients[1] }}{{/if}}</input><br/>
-          Ingredient #3: <input type="text" name="ingredient">{{if ingredients[2] }}{{ ingredients[2] }}{{/if}}</input><br/>
-          Ingredient #4: <input type="text" name="ingredient">{{if ingredients[3] }}{{ ingredients[3] }}{{/if}}</input><br/>
-          Ingredient #5: <input type="text" name="ingredient">{{if ingredients[4] }}{{ ingredients[4] }}{{/if}}</input><br/>
+          Ingredient #1: <input type="text" name="ingredient">{{if ingredients }}{{ ingredients[0] }}{{/if}}</input><br/>
+          Ingredient #2: <input type="text" name="ingredient">{{if ingredients }}{{ ingredients[1] }}{{/if}}</input><br/>
+          Ingredient #3: <input type="text" name="ingredient">{{if ingredients }}{{ ingredients[2] }}{{/if}}</input><br/>
+          Ingredient #4: <input type="text" name="ingredient">{{if ingredients }}{{ ingredients[3] }}{{/if}}</input><br/>
+          Ingredient #5: <input type="text" name="ingredient">{{if ingredients }}{{ ingredients[4] }}{{/if}}</input><br/>
           <button type="submit">Submit Recipe</button>
         </form>
       </script>
