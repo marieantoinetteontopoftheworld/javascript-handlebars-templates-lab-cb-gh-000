@@ -9,7 +9,7 @@
   <body>
     <main id="main">
 
-      <form id="recipe-form" name="recipe-form" onSubmit="createRecipe(); return false;">
+      <!--<form id="recipe-form" name="recipe-form" onSubmit="createRecipe(); return false;">
         Name: <input type="text" name="details"></input><br/>
         Description: <input type="text" name="details"></input><br/>
         Ingredient #1: <input type="text" name="ingredient"></input><br/>
@@ -18,7 +18,20 @@
         Ingredient #4: <input type="text" name="ingredient"></input><br/>
         Ingredient #5: <input type="text" name="ingredient"></input><br/>
         <button type="submit">Submit Recipe</button>
-      </form>
+      </form>-->
+
+      <script type="text/x-handlebars-template" id="recipe-form-template">
+        <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }} return false;">
+          Name: <input type="text" name="details">{{ name }}</input><br/>
+          Description: <input type="text" name="details">{{ description }}</input><br/>
+          Ingredient #1: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
+          Ingredient #2: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
+          Ingredient #3: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
+          Ingredient #4: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
+          Ingredient #5: <input type="text" name="ingredient">{{ ingredients[0] }}</input><br/>
+          <button type="submit">Submit Recipe</button>
+        </form>
+      </script>
 
       <script type="text/x-handlebars-template" id="recipe-template">
         <div id="recipe">
@@ -37,7 +50,7 @@
         </ul>
       </script>
 
-      <script type="text/x-handlebars-template" id="recipe-form-template">
+      <!--<script type="text/x-handlebars-template" id="recipe-form-template">
         <form id="recipe-edit-form" name="recipe-edit-form" onSubmit="updateRecipe(); return false;">
           Description: <input type="text" name="edit-details"></input><br/>
           Ingredient #1: <input type="text" name="edit-ingredient"></input><br/>
@@ -47,7 +60,7 @@
           Ingredient #5: <input type="text" name="edit-ingredient"></input><br/>
           <button type="submit">Update Recipe</button>
         </form>
-      </script>
+      </script>-->
 
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
