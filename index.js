@@ -11,7 +11,7 @@ function createRecipe() {
   var template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
   var result = template(data);
 
-  document.getElementsByTagName('main')[0] += result;
+  document.getElementById('main')[0] += result;
 }
 
 function init() {
