@@ -3,6 +3,15 @@ var data = {};
 function initialRender() {
   data['function_call'] = 'createRecipe()';
 
+  data['name'] = '';
+  data['description'] = '';
+  data['ingredients'] = [];
+  data['ingredients'][0] = '';
+  data['ingredients'][1] = '';
+  data['ingredients'][2] = '';
+  data['ingredients'][3] = '';
+  data['ingredients'][4] = '';
+
   var template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   var result = template(data);
 
