@@ -1,7 +1,9 @@
+var data = {};
+
 function createRecipe() {
   var details = document.getElementsByName('details');
 
-  var data = {
+  data = {
     name: details[0].value,
     description: details[1].value
   };
@@ -21,6 +23,10 @@ function createRecipe() {
   var result = template(data);
 
   document.getElementsByTagName('main')[0].innerHTML = result;
+}
+
+function displayEditForm() {
+  
 }
 
 function init() {
