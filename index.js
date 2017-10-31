@@ -8,8 +8,8 @@ function createRecipe() {
 
   var ingredientsNodes = document.getElementsByName('ingredient');
 
-  data[ingredients] = [];
-  for (i = 0; i < ingredients.length; i++) {
+  data.ingredients = [];
+  for (i = 0; i < ingredientsNodes.length; i++) {
     data[ingredients[i]] = ingredientsNodes[i].value;
   }
 
