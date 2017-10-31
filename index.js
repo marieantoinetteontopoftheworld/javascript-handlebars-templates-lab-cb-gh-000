@@ -1,7 +1,12 @@
 var data = {};
 
 function initialRender() {
-  
+  data['function_call'] = 'createRecipe()';
+
+  var template = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
+  var result = template(data);
+
+  document.getElementsByTagName('main')[0].innerHTML += result;
 }
 
 function createRecipe() {
