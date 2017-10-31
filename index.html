@@ -21,7 +21,7 @@
       </form>-->
 
       <script type="text/x-handlebars-template" id="recipe-form-template">
-        <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }} return false;">
+        <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }}; return false;">
           Name: <input type="text" name="details">{{ name }}</input><br/>
           Description: <input type="text" name="details">{{ description }}</input><br/>
           {{#each ingredients}}
