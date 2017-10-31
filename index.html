@@ -7,62 +7,45 @@
     <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
   </head>
   <body>
-    <main id="main">
-
-      <!--<form id="recipe-form" name="recipe-form" onSubmit="createRecipe(); return false;">
-        Name: <input type="text" name="details"></input><br/>
-        Description: <input type="text" name="details"></input><br/>
-        Ingredient #1: <input type="text" name="ingredient"></input><br/>
-        Ingredient #2: <input type="text" name="ingredient"></input><br/>
-        Ingredient #3: <input type="text" name="ingredient"></input><br/>
-        Ingredient #4: <input type="text" name="ingredient"></input><br/>
-        Ingredient #5: <input type="text" name="ingredient"></input><br/>
-        <button type="submit">Submit Recipe</button>
-      </form>-->
-
-      <script type="text/x-handlebars-template" id="recipe-form-template">
-        <form id="recipe-form" name="recipe-form" onSubmit="{{ function_call }}; return false;">
-          Name: <input type="text" name="details">{{ name }}</input><br/>
-          Description: <input type="text" name="details">{{ description }}</input><br/>
-          {{#each ingredients}}
-            Ingredient: <input type="text" name="ingredient">{{ this }}</input><br/>
-          {{/each}}
-          <button type="submit">Submit Recipe</button>
-        </form>
-      </script>
-
-      <script type="text/x-handlebars-template" id="recipe-template">
-        <div id="recipe">
-          <h1>{{ name }}</h1>
-          {{> recipeDetailsPartial }}
-          <a href="#" onClick="displayEditForm();">Edit Recipe</a>
-        </div>
-      </script>
-
-      <script type="text/x-handlebars-template" id="recipe-details-partial">
-        <h2>{{ description }}</h2>
-        <ul>
-          {{#each ingredients}}
-            {{ displayIngredient }}
-          {{/each}}
-        </ul>
-      </script>
-
-      <!--<script type="text/x-handlebars-template" id="recipe-form-template">
-        <form id="recipe-edit-form" name="recipe-edit-form" onSubmit="updateRecipe(); return false;">
-          Description: <input type="text" name="edit-details"></input><br/>
-          Ingredient #1: <input type="text" name="edit-ingredient"></input><br/>
-          Ingredient #2: <input type="text" name="edit-ingredient"></input><br/>
-          Ingredient #3: <input type="text" name="edit-ingredient"></input><br/>
-          Ingredient #4: <input type="text" name="edit-ingredient"></input><br/>
-          Ingredient #5: <input type="text" name="edit-ingredient"></input><br/>
-          <button type="submit">Update Recipe</button>
-        </form>
-      </script>-->
-
-    </main>
+    <main id="main"></main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
+
+    <script id="recipe-template" type="text/x-handlebars-template">
+      <article>
+        <header><h2 id="nameHeader">{{name}}</h2></header>
+        <div>{{> recipeDetailsPartial }}</div>
+        <footer><a href="#" onclick="displayEditForm();">Edit Recipe</a></footer>
+      </article>
+    </script>
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p id="recipeDescription">{{description}}</p>
+      <ul>
+        {{#each ingredients}}
+        {{ displayIngredient this }}
+        {{/each}}
+      </ul>
+    </script>
+    <script id="recipe-form-template" type="text/x-handlebars-template">
+      <form id="recipe-form" onsubmit="{{submitAction}};return false;">
+        {{> recipeFormPartial }}
+      </form>
+    </script>
+    <script id="recipe-form-partial" type="text/x-handlebars-template">
+      Name: <input id="name" type="text" value="{{name}}"><br>
+      Description: <input id="description" type="text" value="{{description}}"><br>
+      <h4>Ingredients</h4>
+      {{#each ingredients}}
+      <input name="ingredients" type="text" value="{{this}}"><br>
+      {{else}}
+      <input name="ingredients" type="text"><br>
+      <input name="ingredients" type="text"><br>
+      <input name="ingredients" type="text"><br>
+      <input name="ingredients" type="text"><br>
+      <input name="ingredients" type="text"><br>
+      {{/each}}
+      <input type="submit">
+    </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
