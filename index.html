@@ -9,10 +9,6 @@
   <body>
     <main id="main">
 
-      <script type="text/x-handlebars-template" id="recipe-edit-form-template">
-        <p>edit!</p>
-      </script>
-
       <form id="recipe-form-template" name="recipe-form" onSubmit="createRecipe(); return false;">
         Name: <input type="text" name="details"></input><br/>
         Description: <input type="text" name="details"></input><br/>
@@ -37,6 +33,10 @@
             {{ displayIngredient }}
           {{/each}}
         </ul>
+      </script>
+
+      <script type="text/x-handlebars-template" id="recipe-edit-form-template">
+        <p>edit!</p>
       </script>
 
     </main>
