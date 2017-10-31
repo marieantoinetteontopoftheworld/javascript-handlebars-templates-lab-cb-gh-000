@@ -28,7 +28,7 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById('recipe-details-partial').innerHTML);
 
   Handlebars.registerHelper('displayIngredient', function() {
-    return new Handlebars.safeString('<li>' + this + '</li>');
+    return new Handlebars.SafeString('<li>' + this + '</li>');
   });
 }
 
