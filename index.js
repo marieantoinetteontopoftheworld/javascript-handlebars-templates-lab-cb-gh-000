@@ -3,7 +3,7 @@ function createRecipe() {
 
   var data = {
     name: details[0].value,
-    //description: details[1].value
+    description: details[1].value
   };
 
   //var ingredients = document.getElementsByName('ingredient');
@@ -16,7 +16,7 @@ function createRecipe() {
 
 function init() {
   //put any page initialization/handlebars initialization here
-
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById('recipe-details-partial').innerHTML);
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
