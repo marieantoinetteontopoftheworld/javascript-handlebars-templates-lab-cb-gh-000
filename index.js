@@ -4,7 +4,7 @@ function createRecipe() {
   var ingredients = document.getElementsByName('ingredient').value;
 
 
-  alert(ingredients[4];
+  alert(ingredients[4]);
 }
 
 function init() {
