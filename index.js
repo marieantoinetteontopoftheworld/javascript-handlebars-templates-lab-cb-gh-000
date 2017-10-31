@@ -26,11 +26,10 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  var edit_form = document.getElementById('recipe-edit-form-template').innerHTML;
-  var template = Handlebars.compile(edit_form);
-  var result = template(data);
-
-  document.getElementsByTagName('main')[0].innerHTML += result;
+  //var template = Handlebars.compile(document.getElementById('recipe-edit-form-template').innerHTML);
+  //var result = template(data);
+  alert(document.getElementById('recipe-edit-form-template'));
+  //document.getElementsByTagName('main')[0].innerHTML += result;
 }
 
 function init() {
